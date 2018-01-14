@@ -12,11 +12,12 @@ class Square extends Component {
   }
 
   render() {
-    const number = this.props.number;
 
     return (
-        <button className="Keys" onClick={this.handleClick}>
-          {number}
+        <button
+        className={this.props.type}
+        onClick={this.handleClick}>
+          {this.props.number}
         </button>
     );
   }

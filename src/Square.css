@@ -4,3 +4,26 @@
   border-radius: 15px;
   font-size: 1.5em;
 }
+
+.input-button {
+  padding: 20px;
+  margin: 3px;
+  border-radius: 15px;
+  font-size: 1.5em;
+}
+
+.action-button {
+  padding: 20px;
+  margin: 3px;
+  border-radius: 15px;
+  font-size: 1.5em;
+  background-color: orange;
+}
+
+.type-button {
+  padding: 20px;
+  margin: 3px;
+  border-radius: 15px;
+  font-size: 1.5em;
+  background-color: blue;
+}
