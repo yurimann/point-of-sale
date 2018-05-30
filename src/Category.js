@@ -4,17 +4,17 @@ import Item from './Item'
 class Category extends Component {
   constructor(props){
     super(props);
-    this.submitValue = this.submitValue.bind(this)
+    this.changeNumber = this.changeNumber.bind(this);
+    this.state = { number: this.props.number };
   }
 
-  submitValue(n) {
-    this.setState({number: ""});
-
+  changeNumber(n){
+    console.log(this);
   }
 
   render() {
     return(
-      <Item type="Cupcake" onClick={this.submitValue} number={this.props.number}/>
+      <Item type="Cupcake" number={this.props.number} onclick={this.changeNumber}/>
     );
   }
 }

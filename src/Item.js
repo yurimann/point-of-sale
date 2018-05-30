@@ -9,7 +9,9 @@ class Item extends Component {
 
   handleClick(e){
       var ticket = {};
-      ticket[this.props.type] = this.props.number
+      console.log(this);
+      // this.props.onClick(this.props.number);
+      ticket[this.props.type] = this.props.number;
       evaluate(ticket);
 
   }

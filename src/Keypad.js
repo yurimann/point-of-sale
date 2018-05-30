@@ -9,15 +9,11 @@ class Keypad extends Component {
   constructor(props) {
     super(props);
     this.changeNumber = this.changeNumber.bind(this);
-    this.state = {
-      number: "",
-      // prev: null
-    };
-
+    this.reset = this.reset.bind(this);
+    this.state = { number: "" };
   }
 
   changeNumber(n) {
-    console.log(n);
     switch (n){
       case 'Enter': {
         evaluate(this.state.number);
@@ -40,11 +36,15 @@ class Keypad extends Component {
     }
   }
 
+  reset(n){
+    this.setState({number: ""});
+  }
+
   render() {
     return(
       <div>
         <Subtotal number={this.state.number}/>
-        <Category number={this.state.number}/>
+        <Category number={this.state.number} onClick={this.reset}/>
         <div className="Row">
           <Square number="1" onClick={this.changeNumber} type="input-button"/>
           <Square number="2" onClick={this.changeNumber} type="input-button"/>

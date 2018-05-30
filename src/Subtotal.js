@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './Subtotal.css';
 
 class Subtotal extends Component {
-
   render() {
     return(<div className="Sub">
       {this.props.number}
